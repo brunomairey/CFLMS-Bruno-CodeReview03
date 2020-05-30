@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeReview 03</title>
+    <link rel="stylesheet" href="css\main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--header starts here-->
+    <header>
+        <div id="header">
+            <!--<h3 class="header">Newspaper </h3>-->
+            <img id="header1" src="img/logo.png" alt="logo Insurance">
+            <a href="https://www.codefactory.wien ">
+                <img id="header2" src="img/banner.png" alt="bannerfull">
+            </a>
+        </div>
+    </header>
+    <!--header ends here-->
+    <!--navbar starts here-->
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="team.html">Team</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container1">
+             <div id="title1">
+                <h1>Car insurance</h1>
+            </div>
+            <div class="container2">
+                <div id="title2">
+                    <h2>Great coverage begins <br> with a custom quote</h2>
+                </div>
+                <div id="container3">
+                    <div class="form">
+                        <span class><label for="name">Your name:</label><br>
+                        <input type="text" id="name" name="name"><br></span>
+                    </div>
+                    <div class="form">
+                        <label for="age">Age:</label><br>
+                        <input type="text" id="age" name="age">
+                    </div>
+                    <div class="form">
+                        <label for="country">Country:</label><br>
+                        <select id="country">
+                            <option>Austria</option>
+                            <option selected>Hungary</option>
+                            <option>Greece</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="car">Housepower of your Car:</label><br>
+                        <input type="text" id="car" name="car">
+                    </div>
+                </div>
+                <div id="calculate">
+                    <button id="check" type="button" onclick="result()">Calculate</button>
+                </div>
+                    <div id="result">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container4">
+            <h3>Un-complicating car coverage</h3>
+            <span>Understanding your coverage options shouldn't be so hard.<br>We will guide you through available coverage types,<br>starting with who and what is covered.</span>
+        </div>
+        <div class="container5">
+            <div class="container6">
+                <h4>What comes standard</h4>
+               <dl>
+                    <dt>The coverage you need</dt>
+               
+                    <dd><span class="check">&#10004;</span> Bodily Injury Liability</dd>
+                   <dd><span class="check">&#10004;</span> Property Damage</dd>
+                    <dd><span class="check">&#10004;</span> Medical Payments</dd>
+                    </dl>
+                <div class="benefit"><h6>Benefits</h6>
+                <span>12-month rate guarantee &#124; 24/7 customer service &#124; Lifetime Repair Guarantee</span>
+                </div>
+            </div>
+            <div class="container6">
+                <h4>Add-on protection & coverage</h4>
+                <dl>
+                    <dt>For more peace of mind</dt>
+                
+                    <dd><span class="check">&#10004;</span> Better Car Replacement</dd>
+                    <dd><span class="check">&#10004;</span> Towing & Labor</dd>
+                    <dd><span class="check">&#10004;</span> Rental Car Coverage</dd>
+                    </dl>
+                <div class="benefit"><h6>Earned Benefits</h6>
+                <span>Accident Forgiveness<sup>1</sup> &#124; New Car Replacement&#8482;</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--main content ends here-->
+    <!--footer starts here-->
+    <footer>
+        <div id="footermain">
+            <div id="footermenu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="team.html">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footerlogo">
+                <img src="img/logobas.png" alt="logo Insutance">
+            </div>
+            <span id="footertext">
+                Bruno Mairey Code Factory 2020
+            </span>
+        </div>
+    </footer>
+    <!--footer ends here-->
+
+    <script type="text/javascript">
+      
+        function result() {
+                var name = (document.getElementById("name").value);
+                var age = Number(document.getElementById("age").value);
+                var car = Number(document.getElementById("car").value);
+                var country = (document.getElementById("country").value);
+                console.log(country);
+                console.log(age);
+                console.log(car);
+                var austria = Math.round(car*100/age + 50);
+                var hungary = Math.round(car*120/age + 100);
+                var greece = Math.round(car*150/(age+3) + 50);
+                var resultat = [austria, hungary, greece];
+                console.log(resultat);
+                if (country == "Austria") {
+                    return document.getElementById("result").innerHTML=(name +", your insurance costs " + resultat[0] +" €");
+                } 
+                else if (country == "Hungary") {
+                    return document.getElementById("result").innerHTML=(name +", your insurance costs " + resultat[1] +" €");             
+                }
+                else {
+                    return document.getElementById("result").innerHTML=(name +", your insurance costs " + resultat[2] +" €");             
+                }
+                }
+       
+           //document.write("the sum of your grade is " + result[0] + " and your average grade is " + result[1]);
+      
+
+    </script>
+</body>
+
+</html>
