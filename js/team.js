@@ -22,17 +22,21 @@ for (i = 0; i < team.length; i++) {
 }
 
 function resulta() {
-    return document.getElementById("a").innerHTML = "Bruno is a new insurer broker developing the calculation for our customers"
+    var tel1="065898556"
+    return document.getElementById("a").innerHTML = "Bruno is a new insurer broker developing the calculation for our customers. You can reach him under "+tel1
 }
 
 function resultb() {
-    return document.getElementById("b").innerHTML = "Sylvain is the seller and always available to give you a quote"
+	var tel2="065898557"
+    return document.getElementById("b").innerHTML = "Sylvain is the seller and always available to give you a quote. You can reach him under "+tel2
 }
 
 function resultc() {
-    return document.getElementById("c").innerHTML = "Julien is the lawyer and will help you to deal with the legal issue"
+    var tel3="065898558"
+    return document.getElementById("c").innerHTML = "Julien is the lawyer and will help you to deal with the legal issue. You can reach him under "+tel3
 }
 
 function resultd() {
-    return document.getElementById("d").innerHTML = "Sophie is the Boss of the company"
+	 var tel4="065898559"
+    return document.getElementById("d").innerHTML = "Sophie is the Boss of the company. You can reach her under "+tel4
 }
