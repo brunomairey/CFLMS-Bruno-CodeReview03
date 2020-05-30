@@ -38,5 +38,5 @@ function resultc() {
 
 function resultd() {
 	 var tel4="065898559"
-    return document.getElementById("d").innerHTML = "Sophie is the Boss of the company. You can reach her under "+tel4
+    return document.getElementById("d").innerHTML = "Sophie is the boss of the company. You can reach her under "+tel4
 }
