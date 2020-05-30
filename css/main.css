@@ -115,7 +115,7 @@
     display: flex;
     justify-content: center; }
 
-  button {
+  #check {
     width: 21vw;
     height: 4vw;
     margin: 2.5vw 2vw 2.5vw 2vw;
@@ -338,7 +338,7 @@
     display: flex;
     justify-content: center; }
 
-  button {
+  #check {
     width: 21vw;
     height: 4vw;
     margin: 2.5vw 2vw 2.5vw 2vw;
